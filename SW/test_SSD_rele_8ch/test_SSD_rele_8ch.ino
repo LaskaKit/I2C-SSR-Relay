@@ -1,19 +1,18 @@
-//
-// 8 Channel SOLID STATE RELAY module board 5.0V 3.3V
-//
-// Before programming, please check your slave addesses with Arduino I2C scanner!
-//
-// I2C expander on PCF8574(A) chip
-//
-// Logic level “0” ON relay, logic level “1" OFF relay
-//
+/* SSR I2C Relay test for LaskaKit 8-kanálový SSR Relé modul I2C 250VAC 2A
+ * 
+ * LaskaKit 8-kanálový SSR Relé modul I2C 250VAC 2A: https://www.laskakit.cz/laskakit-8-kanalovy-ssr-rele-modul-i2c-250vac-2a/
+ * 
+ * Email:podpora@laskakit.cz
+ * Web:laskakit.cz
+ */
+
 #include <Wire.h>
 
 // I2C slave addresses can changeable by user via dip switch on board
-#define BOARD_1 0x20    // i2c slave address of BOARD #1
+#define BOARD_1 0x20        // i2c slave address of BOARD #1
 #define  ON 0
 #define OFF 1
-int FAST = 1000;              // delay value in ms
+int FAST = 1000;            // delay value in ms
 unsigned char i2c_buffer;
 
 void setup(){
