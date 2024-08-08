@@ -1,0 +1,1 @@
+# LaskaKit 8-kanálový SSR Relé modul I2C 250VAC 2A
